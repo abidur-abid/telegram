@@ -5,3 +5,16 @@
 body{
   @apply font-roboto
 }
+
+/************************************
+        Header Related Style 
+ ************************************/
+.mobileHeader{
+  @apply relative z-10 px-10 py-5 font-semibold
+}
+.mobileHeaderContainer{
+  @apply flex justify-between items-center
+}
+.mobileHeaderRow{
+  @apply flex justify-center items-center gap-5
+}
