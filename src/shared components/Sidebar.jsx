@@ -99,7 +99,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <span className="ml-2">Home</span>
             </Link>
             <Link
-              to="/profile"
+              to="/"
               className="my-2 flex items-center p-2 hover:bg-gray-700 transition-colors duration-200"
               onClick={handleLinkClick}
             >
@@ -107,7 +107,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <span className="ml-2">Profile</span>
             </Link>
             <Link
-              to="/all-blogs"
+              to="/"
               className="my-2 flex items-center p-2 hover:bg-gray-700 transition-colors duration-200"
               onClick={handleLinkClick}
             >
@@ -115,7 +115,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <span className="ml-2">All Blogs</span>
             </Link>
             <Link
-              to="/add-blog"
+              to="/"
               className="my-2 flex items-center p-2 hover:bg-gray-700 transition-colors duration-200"
               onClick={handleLinkClick}
             >
@@ -123,7 +123,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <span className="ml-2">Add Blog</span>
             </Link>
             <Link
-              to="/logout"
+              to="/"
               className="my-2 flex items-center p-2 hover:bg-gray-700 transition-colors duration-200"
               onClick={handleLinkClick}
             >
