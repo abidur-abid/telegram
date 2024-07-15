@@ -51,7 +51,7 @@ const SingleChat = () => {
                     return (
                         <div key={message.id} className='mb-4'>
                             {showTime && (
-                                <p className="text-xs text-gray-500 text-center bg-gray-200 py-1 rounded-full sticky top-0 z-10">
+                                <p className="text-xs text-black w-20  mx-auto text-center bg-gray-200 py-1 rounded-full sticky top-0 z-10">
                                     {formatTime(message.updated_at)}
                                 </p>
                             )}

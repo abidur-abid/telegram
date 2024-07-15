@@ -3,13 +3,15 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home"; // Home page component
 import SingleChat from "../components/SingleChat"; // SingleChat component for individual chat
 import Layout from "../layouts/Layout";
+import NotFound from "../components/notFound";
 
 // Create the router configuration using createBrowserRouter
 export const router = createBrowserRouter([
   {
     // Root route with path "/"
     path: "/",
-    element: <Layout/>, // Main layout as the top-level component
+    element: <Layout/>,
+    errorElement: <NotFound/>, // Main layout as the top-level component
     children: [
       {
         // Default child route, also with path "/"

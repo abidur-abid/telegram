@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ThemeContext } from '../providers/ThemeProvider'; // Make sure you have this context set up
 
 const navItems = [
   { name: 'All', count: 10, path: '/all' },
@@ -10,6 +11,8 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className="overflow-x-auto scrollbar-hidden">
       <nav className="flex space-x-4 p-4">
@@ -18,15 +21,13 @@ const Navbar = () => {
             key={item.name}
             to={item.path}
             className={({ isActive }) =>
-              isActive
-                ? 'relative text-blue-500 pb-2'
-                : 'relative text-gray-700 pb-2'
+              `relative pb-2 ${isActive ? 'text-blue-500' : theme === 'dark' ? 'text-white' : 'text-gray-700'}`
             }
           >
             {({ isActive }) => (
               <>
                 <span>{item.name}</span>
-                <span className="ml-1 text-xs rounded-full px-2 py-1">
+                <span className="ml-1 -mt-8 text-xs rounded-full px-2 py-1">
                   {item.count}
                 </span>
                 {isActive && (

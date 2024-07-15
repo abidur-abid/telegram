@@ -76,7 +76,7 @@ const ChatComponent = () => {
                 <img src={profile} alt='profile' className='w-10 h-10'/>
               </div>
               <div>
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center gap-5'>
                   {/* Display the chat creator's name or a default name */}
                   <li>{chat.creator.name ? chat.creator.name : 'Your Name'}</li>
                   {/* Display a static timestamp */}
