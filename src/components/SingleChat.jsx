@@ -68,9 +68,9 @@ const SingleChat = () => {
 
     // Render the SingleChat component
     return (
-        <section className="h-screen flex flex-col">
+        <section className="h-screen flex flex-col ">
             {/* Header section */}
-            <header className='p-5 flex justify-between items-center sticky top-0 z-10'>
+            <header className='p-5 flex justify-between items-center sticky top-0 z-10 header'>
                 <div className='flex justify-center items-center gap-4'>
                     {/* Back button */}
                     <div className='inline lg:hidden'><Link to={'/'}><FaArrowLeft /></Link></div>
@@ -93,7 +93,7 @@ const SingleChat = () => {
             {renderMessages()}
 
             {/* Footer section */}
-            <footer className='p-5 sticky bottom-0 z-10'>
+            <footer className='p-5 sticky bottom-0 z-10 header'>
                 <div className='flex justify-between items-center gap-3'>
                     <div className='relative flex items-center w-full'>
                         {/* Emoji icon */}

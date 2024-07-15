@@ -4,7 +4,6 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 // Import custom components Header and Navbar from shared components directory
 import Header from '../shared components/Header';
-import Navbar from '../shared components/Navbar';
 
 // Define the Main component
 const Main = () => {
@@ -20,8 +19,7 @@ const Main = () => {
             {/* Conditionally render the Header component if shouldShowHeaderAndNavbar is true */}
             {shouldShowHeaderAndNavbar && <Header />}
             
-            {/* Conditionally render the Navbar component if shouldShowHeaderAndNavbar is true */}
-            {shouldShowHeaderAndNavbar && <Navbar />}
+           
             
             {/* Render the Outlet component which will render the matched child route */}
             <Outlet />

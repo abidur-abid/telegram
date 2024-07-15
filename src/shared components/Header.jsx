@@ -12,17 +12,19 @@ const Header = () => {
     }
 
     return (
-        <header className="relative z-10">
-            <div className='flex justify-between items-center p-4 '>
-                <div className=' flex justify-center items-center gap-5'>
-                    <button onClick={handleSidebar}>
-                        {isSidebarOpen ? <AiOutlineClose /> : <HiMenu />}
-                    </button>
-                    <div className="ml-2">Telegram</div>
+        <header className="sticky top-0 header z-10">
+            <div className='relative z-10'>
+                <div className='flex justify-between items-center p-4 '>
+                    <div className=' flex justify-center items-center gap-5'>
+                        <button onClick={handleSidebar} className='text-2xl'>
+                            {isSidebarOpen ? <AiOutlineClose /> : <HiMenu />}
+                        </button>
+                        <div className="ml-2 text-2xl">Telegram</div>
+                    </div>
+                    <div className=' text-2xl'><GoSearch /></div>
                 </div>
-                <div className='searchIcon'><GoSearch /></div>
+                <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
             </div>
-            <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         </header>
     );
 };
