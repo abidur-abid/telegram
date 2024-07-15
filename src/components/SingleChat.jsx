@@ -73,7 +73,7 @@ const SingleChat = () => {
             <header className='p-5 flex justify-between items-center sticky top-0 z-10'>
                 <div className='flex justify-center items-center gap-4'>
                     {/* Back button */}
-                    <div><Link to={'/'}><FaArrowLeft /></Link></div>
+                    <div className='inline lg:hidden'><Link to={'/'}><FaArrowLeft /></Link></div>
                     <div className='flex justify-start items-center gap-4'>
                         {/* Profile image */}
                         <div><img src={profile} alt='profile' className='w-10 h-10'/></div>

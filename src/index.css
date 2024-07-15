@@ -5,71 +5,28 @@
 :root {
   --bg-color: #ffffff; /* Light mode background color */
   --text-color: #000000; /* Light mode text color */
-  --bg-color-dark: #000000; /* Dark mode background color */
+  --sidebar-color: #ffffff; /* Light mode sidebar color */
+  --bg-color-dark: #0F0F0F; /* Dark mode background color */
   --text-color-dark: #ffffff; /* Dark mode text color */
-  --dark-overlay: rgba(0, 0, 0, 0.4); /* Dark overlay color */
-  --light-overlay: rgba(255, 255, 255, 0.4); /* Light overlay color */
+  --sidebar-color-dark: #212121; /* Dark mode sidebar color */
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  /* transition: background-color 0.3s, color 0.3s; */
-  /* position: relative; */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.dark {
-  --bg-color: var(--bg-color-dark);
-  --text-color: var(--text-color-dark);
-  
+.dark body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
-.light {
-  --bg-color: var(--bg-color);
-  --text-color: var(--text-color);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  /* background-color: #f8f8f8; */
-  z-index: -2;
-  clip-path: circle(0% at 50% 50%);
-  transition: 1.5s ease-out;
+.sidebar {
+  background-color: var(--sidebar-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-
-/* Tailwind CSS classes */
-.header {
-  @apply flex justify-between items-center font-semibold p-5;
-}
-
-.menu {
-  @apply flex justify-center items-center gap-5;
-}
-
-.searchIcon {
-  @apply font-semibold;
-}
-
-.singleNavigationLink {
-  @apply flex justify-start items-center hover:font-semibold uppercase;
-}
-
-.mobileMenuIcon {
-  @apply text-2xl;
-}
-
-.sideBar {
-  @apply p-5 pt-8 relative transition-all ease-in duration-500 h-screen w-72;
-}
-
-.logoDiv {
-  @apply flex justify-start items-center gap-4;
-}
-
-.scrollbar-hidden {
-  scrollbar-width: none;
-}
-
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+.dark .sidebar {
+  background-color: var(--sidebar-color-dark);
 }

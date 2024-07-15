@@ -16,7 +16,7 @@ const Main = () => {
 
     // Return a JSX structure
     return (
-        <div className='w-full mx-auto'>
+        <div className='w-full mx-auto inline lg:hidden'>
             {/* Conditionally render the Header component if shouldShowHeaderAndNavbar is true */}
             {shouldShowHeaderAndNavbar && <Header />}
             

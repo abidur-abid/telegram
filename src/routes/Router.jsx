@@ -1,15 +1,15 @@
 // Import necessary functions and components from react-router-dom and custom components
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../layouts/Main"; // Main layout component
 import Home from "../pages/Home"; // Home page component
 import SingleChat from "../components/SingleChat"; // SingleChat component for individual chat
+import Layout from "../layouts/Layout";
 
 // Create the router configuration using createBrowserRouter
 export const router = createBrowserRouter([
   {
     // Root route with path "/"
     path: "/",
-    element: <Main />, // Main layout as the top-level component
+    element: <Layout/>, // Main layout as the top-level component
     children: [
       {
         // Default child route, also with path "/"
