@@ -16,7 +16,7 @@ const Main = () => {
 
     // Return a JSX structure
     return (
-        <>
+        <div className='w-full mx-auto'>
             {/* Conditionally render the Header component if shouldShowHeaderAndNavbar is true */}
             {shouldShowHeaderAndNavbar && <Header />}
             
@@ -25,7 +25,7 @@ const Main = () => {
             
             {/* Render the Outlet component which will render the matched child route */}
             <Outlet />
-        </>
+        </div>
     );
 };
 
